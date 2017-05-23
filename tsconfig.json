@@ -5,9 +5,9 @@
         "target":"es5",
         "noImplicitAny": true,
         "noImplicitReturns": true,
-        "out": "docs/js/main.js"
+        "out": "dist/js/main.js"
     },
     "exclude": [
-        "docs"
+        "dist"
     ]
 }
