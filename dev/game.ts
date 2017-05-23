@@ -19,7 +19,7 @@ class Game {
         this.numelements = 0;
         this.createElements();
        
-        this.playerone = new Playerone(65, 68, 87, 83); // speler nummer 1 speeltoetsen
+        this.playerone = new Playerone(65, 68, 87, 83); // Player game keys
             
         this.utils = new Utils();
             
@@ -27,7 +27,7 @@ class Game {
     }
     
     public updateScore(i:number){
-        this.score += i; // score bijhouden
+        this.score += i; // Score
     }
     
          private createElements():void {
@@ -48,9 +48,8 @@ class Game {
                
         this.playerone.showHit(hit);
         this.snotspawn.showHit(hit);
-        //
                
-        //gameloop opnieuw aangeroepen
+        //New gameloop request
         requestAnimationFrame(this.gameLoop.bind(this));
      }
      

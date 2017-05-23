@@ -12,36 +12,36 @@ class Playerone {
     private downSpeed : number = 0;
     private upSpeed : number = 0;
     
-    // om te zien of objecten elkaar raken moeten ze een public x,y,width,height hebben
+    // Public objects, used if collision hit
     public x : number;
     public y : number;
     public width: number;
     public height: number;
     
     constructor(left:number, right:number, up:number, down:number) {
-        // maak een divje waar de gif in komt te staan
+        // creates div of playerone gif
         this.div = document.createElement("playerone");
         document.body.appendChild(this.div);
         
-        // keys kunnen verschillend zijn voor elke instance van charmeleon
+        // Keys
         this.upkey = up;
         this.downkey = down;
         this.leftkey = left;
         this.rightkey = right;
         
-        // positie
+        // Position
         this.x = Math.floor(0 + Math.random()*0);
         this.y = Math.floor(200 + Math.random()*200);
         this.width = 180;
         this.height = 145;
         
-        // keyboard listener
+        // Keyboard listener
         window.addEventListener("keydown", this.onKeyDown.bind(this));
         window.addEventListener("keyup", this.onKeyUp.bind(this));
     }
     
     
-    // keyboard input zorgt dat de snelheid wordt aangepast
+    // Keyboard movespeed
     private onKeyDown(event:KeyboardEvent):void {
         switch(event.keyCode){
         case this.upkey:
@@ -59,7 +59,7 @@ class Playerone {
         }
     }
     
-    // speed op 0 alleen als de eigen keys zijn losgelaten
+    // Speed if release button
     private onKeyUp(event:KeyboardEvent):void {
         switch(event.keyCode){
         case this.upkey:
@@ -78,7 +78,7 @@ class Playerone {
     }
 
     
-    // bewegen - let op, de move functie wordt door game aangeroepen - animatie is niet smooth als de keydown listener een beweging triggered
+    // Move
     public move() : void {
         
         this.x = this.x - this.leftSpeed + this.rightSpeed;
@@ -88,7 +88,7 @@ class Playerone {
         this.div.style.transform = "translate("+this.x+"px, "+this.y+"px) scaleX(-1)";
     }
 
-    // deze functie toont of we geraakt worden of niet
+    // Show hit
     public showHit(hit:boolean) : void {
         if(hit){
             this.div.style.borderColor = "red";

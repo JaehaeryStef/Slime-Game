@@ -4,7 +4,6 @@
 
 class Snotspawn extends Gameobjects {
     
-       // om te zien of objecten elkaar raken moeten ze een public x,y,width,height hebben
         private div:HTMLElement;
             
         private game:Game;
@@ -17,12 +16,12 @@ class Snotspawn extends Gameobjects {
         this.div = document.createElement("snotspawn");
         document.body.appendChild(this.div);
   
-        // random positie
+        // Random position
 
         this.div.style.left = this.x + "px";
         this.div.style.top = this.y + "px";
         
-        // random kleur
+        // Random color
         let color:number = Math.random() * 360;
         
         this.div.style.webkitFilter = "hue-rotate("+color+"deg)";
