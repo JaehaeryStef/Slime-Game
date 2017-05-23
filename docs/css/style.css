@@ -26,16 +26,6 @@ level {
     box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.5);
 }
 
-snot {
-    width:1000px; min-height:1000px;
-    background-image: url('../images/Snot.gif');
-}
-
-bigsnot {
-    width:1000px; min-height:1000px;
-    background-image: url('../images/Snot.gif');
-}
-
 playerone {
     width:187px; min-height:197px;
     background-image: url('../images/playerone.gif');
