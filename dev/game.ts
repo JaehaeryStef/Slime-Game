@@ -40,7 +40,7 @@ class Game {
     
     private gameLoop(){
         
-        console.log(this.snotspawn.x);
+        console.log(this.snotspawn);
         this.playerone.move();
         
         let hit:boolean = this.utils.objectsCollide(this.playerone, this.snotspawn); 
