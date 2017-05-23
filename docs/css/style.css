@@ -15,17 +15,6 @@ body * {
     background-repeat: no-repeat;
 }
 
-level {
-    left:calc(50% - 512px);
-    top:calc(50% - 384px);
-    width:1024px; height:768px;
-    background-image: url('../images/road.png');
-    border-radius: 15px;
-    overflow: hidden;
-    border:3px solid white;
-    box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.5);
-}
-
 playerone {
     width:187px; min-height:197px;
     background-image: url('../images/playerone.gif');
@@ -44,5 +33,5 @@ enemy {
 
 snotspawn {
     width:145px; height: 145px;
-    background-image: url('../images/Snot.gif');
+    background-image: url('../images/Snot.GIF');
 }
