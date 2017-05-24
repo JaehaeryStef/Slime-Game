@@ -5,3 +5,4 @@ Below a link to my current state of the game I am making, the goal is to eat as 
 
 https://abbemad.github.io/Slime-Game/
 
+![](https://github.com/abbemad/Slime-Game/blob/master/Klassendiagram-Slime.jpg)
