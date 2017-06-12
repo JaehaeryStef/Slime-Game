@@ -30,8 +30,8 @@ class Playerone {
         this.rightkey = right;
         
         // Position
-        this.x = Math.floor(0 + Math.random()*0);
-        this.y = Math.floor(200 + Math.random()*200);
+        this.x = 500;
+        this.y = 800;
         this.width = 180;
         this.height = 145;
         
@@ -91,10 +91,9 @@ class Playerone {
     // Show hit
     public showHit(hit:boolean) : void {
         if(hit){
-            this.div.style.borderColor = "red";
-            console.log("gasg");
+            console.log("Hit");
         } else {
-            this.div.style.borderColor = "greenyellow";
+            this.div.style.borderColor = "Not hit";
         }
     }
 }

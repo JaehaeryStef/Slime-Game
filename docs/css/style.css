@@ -35,3 +35,37 @@ snotspawn {
     width:145px; height: 145px;
     background-image: url('../images/Snot.gif');
 }
+
+title {
+    width: 585px;
+    height: 169px;
+    margin: auto;
+    background-image: url('../images/title.png');
+    left: calc(100% / 2 - 290px);
+}
+
+start {
+    width: 284px;
+    height: 145px;
+    margin: auto;
+    background-image: url('../images/start.png');
+    left: calc(100% / 2 - 140px);
+}
+
+score {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    color: white;
+    text-shadow: 3px 3px black;
+    left: 10px;
+    top: 5px;
+}
+
+time {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    color: white;
+    text-shadow: 3px 3px black;
+    left: 10px;
+    top: 75px;
+}

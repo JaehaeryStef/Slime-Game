@@ -4,7 +4,11 @@
 class Game {
     
     private score:number = 0;   
-   
+    private scoreElement: HTMLElement;
+    private time: number = 120;
+    private timeCount: number = 0;
+    private timeElement: HTMLElement;
+
     private playerone:Playerone;
     
     private snotspawn:Snotspawn;
@@ -16,6 +20,11 @@ class Game {
     
     constructor() {
         
+        this.scoreElement = document.createElement("score");
+        document.body.appendChild(this.scoreElement);
+        this.timeElement = document.createElement("time");
+        document.body.appendChild(this.timeElement);
+        
         this.numelements = 0;
         this.createElements();
        
@@ -26,26 +35,19 @@ class Game {
         requestAnimationFrame(this.gameLoop.bind(this));
     }
     
-    public updateScore(i:number){
-        this.score += i; // Score
-    }
     
          private createElements():void {
              
-         console.log("test");
-
          this.snotspawn = new Snotspawn(this);
          
      }
     
     private gameLoop(){
         
-        console.log(this.snotspawn);
         this.playerone.move();
         
         let hit:boolean = this.utils.objectsCollide(this.playerone, this.snotspawn); 
-        // let hittwo:boolean = this.utils.objectsCollidetwee(this.playerone, this.snotspawn);
-               
+        
         this.playerone.showHit(hit);
         this.snotspawn.showHit(hit);
                
@@ -54,7 +56,7 @@ class Game {
      }
      
      public createSnot(){
-         console.log("UBERTEST");
+         console.log("Create Snot");
          this.snotspawn = new Snotspawn(this);
          
      }
