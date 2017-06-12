@@ -32,7 +32,7 @@ class Snotspawn extends Gameobjects {
         if(hit){
             this.div.remove();
             this.game.createSnot();
-
+            
             } else {
             
         }

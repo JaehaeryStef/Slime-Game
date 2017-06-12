@@ -43,7 +43,13 @@ class Game {
      }
     
     private gameLoop(){
-        
+        this.scoreElement.innerHTML = "Score: " + this.score;
+        this.timeCount++;
+        if (this.timeCount >= 60) {
+            this.time--;
+            this.timeCount = 0;
+        }
+        this.timeElement.innerHTML = "Time: " + this.time;
         this.playerone.move();
         
         let hit:boolean = this.utils.objectsCollide(this.playerone, this.snotspawn); 
