@@ -77,7 +77,7 @@ var Playerone = (function () {
 var Game = (function () {
     function Game() {
         this.score = 0;
-        this.time = 120;
+        this.time = 60;
         this.timeCount = 0;
         this.scoreElement = document.createElement("score");
         document.body.appendChild(this.scoreElement);
@@ -105,6 +105,10 @@ var Game = (function () {
         this.playerone.showHit(hit);
         this.snotspawn.showHit(hit);
         requestAnimationFrame(this.gameLoop.bind(this));
+        if (this.time <= 0) {
+            this.playerone.div.remove();
+            this.timeElement.remove();
+        }
     };
     Game.prototype.createSnot = function () {
         console.log("Create Snot");

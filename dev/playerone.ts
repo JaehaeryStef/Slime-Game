@@ -1,6 +1,6 @@
 class Playerone {
     
-    private div:HTMLElement;
+    public div:HTMLElement;
     
     private downkey : number;
     private upkey : number;

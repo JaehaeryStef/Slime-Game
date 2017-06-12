@@ -5,7 +5,7 @@ class Game {
     
     private score:number = 0;   
     private scoreElement: HTMLElement;
-    private time: number = 120;
+    private time: number = 60;
     private timeCount: number = 0;
     private timeElement: HTMLElement;
 
@@ -43,13 +43,17 @@ class Game {
      }
     
     private gameLoop(){
+
         this.scoreElement.innerHTML = "Score: " + this.score;
         this.timeCount++;
+
         if (this.timeCount >= 60) {
             this.time--;
             this.timeCount = 0;
         }
+
         this.timeElement.innerHTML = "Time: " + this.time;
+        
         this.playerone.move();
         
         let hit:boolean = this.utils.objectsCollide(this.playerone, this.snotspawn); 
@@ -59,6 +63,13 @@ class Game {
                
         //New gameloop request
         requestAnimationFrame(this.gameLoop.bind(this));
+
+        //remove time and player while time is zero
+        if (this.time <= 0) {
+            this.playerone.div.remove();
+            this.timeElement.remove();
+        }
+        
      }
      
      public createSnot(){
