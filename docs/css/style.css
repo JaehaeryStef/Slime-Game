@@ -37,7 +37,7 @@ snotspawn {
 }
 
 title {
-    width: 585px;
+    width: 500px;
     height: 169px;
     margin: auto;
     background-image: url('../images/title.png');
@@ -54,7 +54,7 @@ start {
 
 score {
     font-family: 'Open Sans', sans-serif;
-    font-size: 50px;
+    font-size: 75px;
     color: white;
     text-shadow: 3px 3px black;
     left: 10px;

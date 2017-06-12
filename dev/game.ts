@@ -28,7 +28,7 @@ class Game {
         this.numelements = 0;
         this.createElements();
        
-        this.playerone = new Playerone(65, 68, 87, 83); // Player game keys
+        this.playerone = new Playerone(Enumskeys.Keys.Left, Enumskeys.Keys.Right, Enumskeys.Keys.Up, Enumskeys.Keys.Down); // Player game keys
             
         this.utils = new Utils();
             

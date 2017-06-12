@@ -8,6 +8,16 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var Enumskeys;
+(function (Enumskeys) {
+    var Keys;
+    (function (Keys) {
+        Keys[Keys["Up"] = 87] = "Up";
+        Keys[Keys["Left"] = 65] = "Left";
+        Keys[Keys["Down"] = 83] = "Down";
+        Keys[Keys["Right"] = 68] = "Right";
+    })(Keys = Enumskeys.Keys || (Enumskeys.Keys = {}));
+})(Enumskeys || (Enumskeys = {}));
 var Playerone = (function () {
     function Playerone(left, right, up, down) {
         this.leftSpeed = 0;
@@ -85,7 +95,7 @@ var Game = (function () {
         document.body.appendChild(this.timeElement);
         this.numelements = 0;
         this.createElements();
-        this.playerone = new Playerone(65, 68, 87, 83);
+        this.playerone = new Playerone(Enumskeys.Keys.Left, Enumskeys.Keys.Right, Enumskeys.Keys.Up, Enumskeys.Keys.Down);
         this.utils = new Utils();
         requestAnimationFrame(this.gameLoop.bind(this));
     }
