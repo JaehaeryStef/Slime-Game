@@ -35,7 +35,6 @@ class Game {
         requestAnimationFrame(this.gameLoop.bind(this));
     }
     
-    
          private createElements():void {
              
          this.snotspawn = new Snotspawn(this);
@@ -57,10 +56,10 @@ class Game {
         this.playerone.move();
         
         let hit:boolean = this.utils.objectsCollide(this.playerone, this.snotspawn); 
-        
+
         this.playerone.showHit(hit);
         this.snotspawn.showHit(hit);
-               
+
         //New gameloop request
         requestAnimationFrame(this.gameLoop.bind(this));
 
@@ -75,7 +74,7 @@ class Game {
      public createSnot(){
          console.log("Create Snot");
          this.snotspawn = new Snotspawn(this);
-         
+         this.score++;    
      }
      
 } 

@@ -113,6 +113,7 @@ var Game = (function () {
     Game.prototype.createSnot = function () {
         console.log("Create Snot");
         this.snotspawn = new Snotspawn(this);
+        this.score++;
     };
     return Game;
 }());
