@@ -1,4 +1,6 @@
 class Playerone {
+
+    public behavior: Behaviour;
     
     public div:HTMLElement;
     
@@ -92,6 +94,7 @@ class Playerone {
     public showHit(hit:boolean) : void {
         if(hit){
             console.log("Hit");
+
         } else {
             this.div.style.borderColor = "Not hit";
         }

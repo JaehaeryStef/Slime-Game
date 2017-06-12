@@ -9,6 +9,7 @@ class Snotspawn extends Gameobjects {
         private game:Game;
       
     constructor(g:Game) {
+        
         super((Math.random() * window.innerHeight),(Math.random() * window.innerHeight),100,100);
         
         this.game = g;
