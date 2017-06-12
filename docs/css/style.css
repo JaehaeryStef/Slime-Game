@@ -36,11 +36,11 @@ snotspawn {
     background-image: url('../images/Snot.gif');
 }
 
-title {
+gamename {
     width: 500px;
     height: 169px;
     margin: auto;
-    background-image: url('../images/title.png');
+    background-image: url('../images/gamename.png');
     left: calc(100% / 2 - 290px);
 }
 
