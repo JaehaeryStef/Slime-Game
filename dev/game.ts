@@ -8,7 +8,7 @@ class Game {
     private time: number = 60;
     private timeCount: number = 0;
     private timeElement: HTMLElement;
-
+    private gameOver: HTMLElement;
     private playerone:Playerone;
     
     private snotspawn:Snotspawn;
@@ -63,15 +63,18 @@ class Game {
         //New gameloop request
         requestAnimationFrame(this.gameLoop.bind(this));
 
-        //remove time and player while time is zero
-        if (this.time <= 0) {
+        //remove time and player while time is zero + game over
+        if (this.time <= 60) {
             this.playerone.div.remove();
             this.timeElement.remove();
+
+            this.gameOver = document.createElement("gameover");
+            document.body.appendChild(this.gameOver);
+            this.gameOver.innerHTML = "Game Over";
         }
-        
      }
-     
-     public createSnot(){
+
+       public createSnot(){
          console.log("Create Snot");
          this.snotspawn = new Snotspawn(this);
          this.score++;    
