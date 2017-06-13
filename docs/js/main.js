@@ -115,7 +115,7 @@ var Game = (function () {
         this.playerone.showHit(hit);
         this.snotspawn.showHit(hit);
         requestAnimationFrame(this.gameLoop.bind(this));
-        if (this.time <= 60) {
+        if (this.time <= 0) {
             this.playerone.div.remove();
             this.timeElement.remove();
             this.gameOver = document.createElement("gameover");

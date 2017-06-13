@@ -64,7 +64,7 @@ class Game {
         requestAnimationFrame(this.gameLoop.bind(this));
 
         //remove time and player while time is zero + game over
-        if (this.time <= 60) {
+        if (this.time <= 0) {
             this.playerone.div.remove();
             this.timeElement.remove();
 
