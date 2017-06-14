@@ -1,22 +1,17 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 var Enumskeys;
 (function (Enumskeys) {
-    var Keys;
     (function (Keys) {
         Keys[Keys["Up"] = 87] = "Up";
         Keys[Keys["Left"] = 65] = "Left";
         Keys[Keys["Down"] = 83] = "Down";
         Keys[Keys["Right"] = 68] = "Right";
-    })(Keys = Enumskeys.Keys || (Enumskeys.Keys = {}));
+    })(Enumskeys.Keys || (Enumskeys.Keys = {}));
+    var Keys = Enumskeys.Keys;
 })(Enumskeys || (Enumskeys = {}));
 var Playerone = (function () {
     function Playerone(left, right, up, down) {
@@ -155,16 +150,15 @@ window.addEventListener("load", function () {
 var Snotspawn = (function (_super) {
     __extends(Snotspawn, _super);
     function Snotspawn(g) {
-        var _this = _super.call(this, (Math.random() * window.innerHeight), (Math.random() * window.innerHeight), 100, 100) || this;
-        _this.game = g;
-        _this.div = document.createElement("snotspawn");
-        document.body.appendChild(_this.div);
-        _this.div.style.left = _this.x + "px";
-        _this.div.style.top = _this.y + "px";
+        _super.call(this, (Math.random() * window.innerHeight), (Math.random() * window.innerHeight), 100, 100);
+        this.game = g;
+        this.div = document.createElement("snotspawn");
+        document.body.appendChild(this.div);
+        this.div.style.left = this.x + "px";
+        this.div.style.top = this.y + "px";
         var color = Math.random() * 360;
-        _this.div.style.webkitFilter = "hue-rotate(" + color + "deg)";
-        _this.div.style.filter = "hue-rotate(" + color + "deg)";
-        return _this;
+        this.div.style.webkitFilter = "hue-rotate(" + color + "deg)";
+        this.div.style.filter = "hue-rotate(" + color + "deg)";
     }
     Snotspawn.prototype.showHit = function (hit) {
         if (hit) {
