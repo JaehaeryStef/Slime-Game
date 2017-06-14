@@ -58,3 +58,4 @@ Er is een class die enumkeys heet en daarmee geef je aan wat het keyboard toest 
 Gameloop:
 Er is een gameloop.
 
+Op bepaalde plekken heb ik suggesties neergezet voor je code.

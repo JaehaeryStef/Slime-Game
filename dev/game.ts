@@ -1,5 +1,30 @@
 /// <reference path="playerone.ts" />
 
+/**
+ * Wanneer je in main de getInstance gaat gebruiken voor singleton
+ *    private static instance: Game;
+ * 
+ * private constructor() {
+        
+    }
+
+    public static getInstance(){
+        if(!Game.instance){
+            Game.instance = new Game();
+            Game.instance.getStartScreen();
+
+        }
+
+        return Game.instance;
+    }
+ * 
+ * Met dit kan je vanuit overal zonder mega veel doorluikjes de Game aanroepen
+ * Dit zal super handig zijn als je dus meerdere schermen gaat gebruiken. 
+ * Ik raad zelf aan om een scherm te maken voor het startScherm, SpeelScherm en GameOver scherm
+ * Dit zorgt gelijk ook voor veel meer orde in je codering.
+ * Daarnaast zou je daarmee veel meer kunnen uitbreiden, naar meerdere levels bijvoorbeeld.
+ */
+
 
 class Game {
     
