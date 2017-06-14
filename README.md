@@ -59,3 +59,6 @@ Gameloop:
 Er is een gameloop.
 
 Op bepaalde plekken heb ik suggesties neergezet voor je code.
+
+**Aangezien er nog aardig punten mist die wel verplicht zijn zal ik hiervoor een onvoldoende moeten geven**
+De mogelijkheid om het nog op te lossen voordat de docenten ernaar gaan kijken is er, grijp die kans.
